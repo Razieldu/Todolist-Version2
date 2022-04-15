@@ -30,15 +30,15 @@ const Item = mongoose.model("Item", itemsSchema);
 //const Item的I必須要大寫開頭,collection名稱(Item)必須為單數,因為資料庫會自動轉為複數
 
 const item1 = new Item({
-  name: "welcome to todolist"
+  name: "歡迎來到代辦事項"
 });
 
 const item2 = new Item({
-  name: "hit the plus button to add a new item"
+  name: "點擊 + 增加新事項"
 });
 
 const item3 = new Item({
-  name: "<--hit this to delete an item "
+  name: "點擊小方框刪除代辦事項 "
 });
 
 const defaultItems = [item1, item2, item3];
