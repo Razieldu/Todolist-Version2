@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
+
+
 mongoose.connect("mongodb+srv://admin-jeremy:Sswoy123@cluster0.id8me.mongodb.net/todolistDB", {
   useNewUrlParser: true
 });

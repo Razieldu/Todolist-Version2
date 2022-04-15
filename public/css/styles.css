@@ -55,13 +55,7 @@ p {
   color: #00204a;
 }
 
-p.footer{
-  /* 新增footer文字 */
-  font-size: 1rem;
-  font-weight: bold;
-  color:white;
-  font-family: 'helvetica neue';
-}
+
 
 
 form.item {
@@ -74,8 +68,8 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #A683E3;
-  color: #fff;
+  background-color: #fff;
+  color: #A683E3;
   font-size: 2.5rem;
   padding-bottom: 6px;
   border-width: 0;
