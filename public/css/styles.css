@@ -64,9 +64,9 @@ form.item {
 }
 
 button {
-  min-height: 50px;
-  max-width: 50px;
-  
+  min-height: 3rem;
+  width: 3rem;
+
   border-radius: 50%;
   border-color: transparent;
   background-color:#A683E3;
