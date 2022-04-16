@@ -32,7 +32,7 @@ const Item = mongoose.model("Item", itemsSchema);
 //const Item的I必須要大寫開頭,collection名稱(Item)必須為單數,因為資料庫會自動轉為複數
 
 const item1 = new Item({
-  name: "歡迎來到代辦事項"
+  name: "歡迎來到待辦事項"
 });
 
 const item2 = new Item({
@@ -40,7 +40,7 @@ const item2 = new Item({
 });
 
 const item3 = new Item({
-  name: "點擊小方框刪除代辦事項 "
+  name: "點擊小方框刪除待辦事項 "
 });
 
 const defaultItems = [item1, item2, item3];
@@ -123,8 +123,9 @@ app.post("/delete", function(req, res) {
   if(listName==="Today"){
     Item.findByIdAndRemove(checkedItemid, function(err) {
       if (!err) {
-        res.redirect("/");
-      }
+          res.redirect("/");
+      
+     }
     })
   }else{
     List.findOneAndUpdate({name:listName},{$pull:{items:{_id:checkedItemid}}},function(err,foundList){
@@ -141,7 +142,7 @@ app.get("/about", function(req, res) {
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 8000;
+  port = 3000;
 }
 
 app.listen(port, function() {
