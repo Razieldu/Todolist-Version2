@@ -2,7 +2,7 @@
 
 
 
-
+require('dotenv').config()
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -20,7 +20,7 @@ app.use(express.static("public"));
 
 
 
-mongoose.connect("mongodb+srv://admin-jeremy:Sswoy123@cluster0.id8me.mongodb.net/todolistDB", {
+mongoose.connect(process.env.ATLAS, {
   useNewUrlParser: true
 });
 
@@ -124,7 +124,7 @@ app.post("/delete", function(req, res) {
     Item.findByIdAndRemove(checkedItemid, function(err) {
       if (!err) {
           res.redirect("/");
-      
+
      }
     })
   }else{
